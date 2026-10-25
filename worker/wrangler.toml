@@ -1,0 +1,26 @@
+# NEERAJ Cloud Worker - D1 store + reminder scheduler.
+#
+#   npx wrangler d1 create neeraj-cloud
+#   npx wrangler d1 execute neeraj-cloud --remote --file=worker/schema.sql
+#   npx wrangler deploy -c worker/wrangler.toml
+#
+# Then set the token (never commit it):
+#   npx wrangler secret put NEERAJ_TOKEN -c worker/wrangler.toml
+
+name = "neeraj-cloud"
+main = "index.js"
+compatibility_date = "2024-11-01"
+
+# Every 15 minutes. This is what lets a reminder fire while your PC is shut.
+[triggers]
+crons = ["*/15 * * * *"]
+
+# Fill in the database_id printed by `wrangler d1 create`.
+[[d1_databases]]
+binding = "DB"
+database_name = "neeraj-cloud"
+database_id = "REPLACE_WITH_YOUR_D1_ID"
+
+# Optional: POST due reminders to a URL you control (Slack, ntfy, your own hook).
+# [vars]
+# REMINDER_WEBHOOK = "https://ntfy.sh/your-topic"

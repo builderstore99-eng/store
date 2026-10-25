@@ -1,0 +1,17 @@
+# dependencies / build output
+node_modules/
+.wrangler/
+dist/
+
+# local secrets - never commit a token or a backend address
+.env
+.env.*
+!.env.example
+.dev.vars
+
+# editors and OS noise
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log

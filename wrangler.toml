@@ -1,0 +1,16 @@
+# Cloudflare Pages configuration.
+#
+#   npx wrangler pages deploy .
+#
+# The project name below is what appears in your Cloudflare dashboard.
+name = "neeraj-pocket"
+compatibility_date = "2024-11-01"
+pages_build_output_dir = "."
+
+# The optional /api/* proxy (functions/api/[[path]].js) reads these. Set them
+# in the Pages dashboard under Settings -> Environment variables, or uncomment
+# here for local testing. Never commit real values.
+#
+# [vars]
+# NEERAJ_BACKEND = "https://neeraj.example.workers.dev"
+# NEERAJ_TOKEN = "put-this-in-a-secret-instead"

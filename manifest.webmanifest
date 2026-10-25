@@ -1,0 +1,19 @@
+{
+  "name": "NEERAJ Pocket",
+  "short_name": "NEERAJ",
+  "description": "Talk to your own local AI from your phone. Everything is remembered on your machine.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0b0d12",
+  "theme_color": "#0b0d12",
+  "icons": [
+    {
+      "src": "assets/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
